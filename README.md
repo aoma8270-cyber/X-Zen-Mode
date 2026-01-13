@@ -86,7 +86,7 @@ Enjoy a minimal, Apple-inspired UI with easy ON/OFF toggles.
 
 ## Support & Donation
 
-☕ [Support the Creator](https://www.buymeacoffee.com/yourid)
+☕ [Support the Creator](https://www.buymeacoffee.com/aoma04)
 
 ## License
 
