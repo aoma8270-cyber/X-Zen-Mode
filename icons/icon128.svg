@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <!-- 背景グラデーション -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    
+    <!-- アクセントグラデーション -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+    
+    <!-- 光のグラデーション -->
+    <radialGradient id="glowGradient" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- 背景の丸角四角形 -->
+  <rect x="4" y="4" width="120" height="120" rx="28" ry="28" fill="url(#bgGradient)"/>
+  
+  <!-- 光の効果 -->
+  <ellipse cx="64" cy="40" rx="50" ry="35" fill="url(#glowGradient)"/>
+  
+  <!-- X文字（スタイライズ） -->
+  <g transform="translate(64, 64)">
+    <!-- 左上から右下の線 -->
+    <line x1="-28" y1="-28" x2="28" y2="28" 
+          stroke="url(#accentGradient)" 
+          stroke-width="12" 
+          stroke-linecap="round"/>
+    
+    <!-- 右上から左下の線 -->
+    <line x1="28" y1="-28" x2="-28" y2="28" 
+          stroke="url(#accentGradient)" 
+          stroke-width="12" 
+          stroke-linecap="round"/>
+  </g>
+  
+  <!-- 禅の円（円相） -->
+  <circle cx="64" cy="64" r="42" 
+          fill="none" 
+          stroke="white" 
+          stroke-width="3" 
+          stroke-opacity="0.15"/>
+  
+  <!-- 小さな光の点 -->
+  <circle cx="64" cy="22" r="3" fill="white" fill-opacity="0.6"/>
+  
+  <!-- 下部のアクセントライン -->
+  <line x1="44" y1="106" x2="84" y2="106" 
+        stroke="url(#accentGradient)" 
+        stroke-width="3" 
+        stroke-linecap="round"
+        stroke-opacity="0.8"/>
+</svg>

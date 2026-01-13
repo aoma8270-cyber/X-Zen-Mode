@@ -1,0 +1,16 @@
+{
+  "name": "x-zen-mode",
+  "version": "1.0.0",
+  "description": "🧘 Xの利用を制限して集中力を高めるChrome拡張機能",
+  "main": "content.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "sharp": "^0.34.5"
+  }
+}

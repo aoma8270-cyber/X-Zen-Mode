@@ -1,0 +1,114 @@
+/**
+ * X Zen Mode - Content Styles
+ * 設定に基づいてXの要素を非表示にするスタイル
+ */
+
+/* ===================================
+   共通: data-xzen-hidden属性による非表示
+   =================================== */
+[data-xzen-hidden="true"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* ===================================
+   おすすめタブの非表示（ホーム画面のみ）
+   =================================== */
+
+/* content.jsで付与したターゲット属性のみを消すように変更 */
+.xzen-hide-foryou [data-xzen-target="foryou-tab"] {
+  display: none !important;
+}
+
+/* ===================================
+   サイドバーの非表示
+   =================================== */
+.xzen-hide-sidebar [data-testid="sidebarColumn"] {
+  display: none !important;
+  width: 0 !important;
+  min-width: 0 !important;
+  max-width: 0 !important;
+  flex: 0 !important;
+}
+
+/* サイドバー（特定のデータ属性を持つものに限定） */
+.xzen-hide-sidebar [data-testid="sidebarColumn"] {
+  display: none !important;
+}
+
+/* 検索バー以外のサイドバーコンテンツ（もし上記で消えない場合のみ） */
+.xzen-hide-sidebar [data-testid="sidebarColumn"] > div > div:not(:first-child) {
+  display: none !important;
+}
+
+/* トレンドセクション */
+.xzen-hide-sidebar [data-testid="trend"],
+.xzen-hide-sidebar [aria-label*="Trending"],
+.xzen-hide-sidebar [aria-label*="トレンド"] {
+  display: none !important;
+}
+
+/* おすすめユーザーセクション */
+.xzen-hide-sidebar [data-testid="UserCell"],
+.xzen-hide-sidebar [aria-label*="Who to follow"],
+.xzen-hide-sidebar [aria-label*="おすすめユーザー"] {
+  display: none !important;
+}
+
+/* Premium広告 */
+.xzen-hide-sidebar a[href*="premium"] {
+  display: none !important;
+}
+
+/* メインコンテンツの幅調整 */
+.xzen-hide-sidebar [data-testid="primaryColumn"] {
+  max-width: 600px !important; /* Xの標準幅に固定して崩れを防ぐ */
+  margin: 0 auto !important;
+}
+
+/* ===================================
+   DMポップアップの非表示
+   =================================== */
+.xzen-hide-dm [data-testid="DMDrawer"],
+.xzen-hide-dm [data-testid="DmDrawer"],
+.xzen-hide-dm [data-testid="DMActivity"],
+.xzen-hide-dm [aria-label="Direct Messages"],
+.xzen-hide-dm [aria-label="ダイレクトメッセージ"] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* メッセージドロワー */
+.xzen-hide-dm [data-testid="DMDrawerHeader"],
+.xzen-hide-dm [data-testid="DM_Drawer"] {
+  display: none !important;
+}
+
+/* ===================================
+   アニメーション（スムーズな表示/非表示）
+   =================================== */
+[data-testid="sidebarColumn"],
+[data-testid="DMDrawer"],
+[data-testid="ScrollSnap-List"] > div {
+  transition: opacity 0.2s ease-out, 
+              visibility 0.2s ease-out,
+              max-width 0.3s ease-out;
+}
+
+/* ===================================
+   レイアウト調整
+   =================================== */
+
+/* サイドバー非表示時のメインコンテンツ幅調整 */
+.xzen-hide-sidebar main[role="main"] {
+  max-width: 100% !important;
+}
+
+/* タイムラインの中央配置を維持 */
+.xzen-hide-sidebar [data-testid="primaryColumn"] {
+  margin: 0 auto !important;
+}
