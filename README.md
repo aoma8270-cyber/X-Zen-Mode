@@ -38,7 +38,7 @@ Apple風のミニマルなUIで、ON/OFFを簡単に切り替えられます。
 
 ## サポート・寄付
 
-☕ [Support the Creator](https://www.buymeacoffee.com/yourid)
+☕ [Support the Creator](https://www.buymeacoffee.com/aoma04)
 
 ## ライセンス
 
@@ -91,3 +91,4 @@ Enjoy a minimal, Apple-inspired UI with easy ON/OFF toggles.
 ## License
 
 MIT License
+
